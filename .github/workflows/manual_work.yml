@@ -1,0 +1,14 @@
+name: manual-work-01
+on:
+    workflow_dispatch:                          # 수동 실행 이벤트
+        inputs:                                 # 입력 파라미터 지정
+            greeting:                           # 입력 파라미터명
+                type: string                    # 데이터형(문자열) -> boolean|number|string|choice|environment
+                default: Welcome                # 입력 파라미터의 기본값
+                required: true                  # 입력 파라미터의 필수 플래그
+                description: A welcome word     # 입력 파라미터 개요
+jobs:
+    run:
+        runs-on: ubuntu-latest
+        steps:
+            - run: echo "${{inputs.greeting}}"  # 입력 파라미터의 greeting값 출력
