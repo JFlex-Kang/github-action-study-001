@@ -1,0 +1,9 @@
+name: schedule-work-01
+on:
+    schedule:                                               # 정기실행 이벤트
+        - cron: '*/15 * * * *'      # 매시간 15분마다 실행하는 cron식
+jobs:
+    run:
+        runs-on: ubuntu-latest
+        steps:
+            - run: date
