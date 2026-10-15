@@ -7,6 +7,15 @@ on:
                 default: Welcome                # 입력 파라미터의 기본값
                 required: true                  # 입력 파라미터의 필수 플래그
                 description: A welcome word     # 입력 파라미터 개요
+            log-level:
+                type: choice
+                options:
+                    - info
+                    - warn
+                    - error
+                    - debug
+                required: true
+                description: log level form filter
 jobs:
     run:
         runs-on: ubuntu-latest
