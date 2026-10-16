@@ -1,0 +1,12 @@
+name: Value and Secrets
+on: push
+jobs:
+    print:
+        runs-on: ubuntu-latest
+        env:
+            VARNEW1: ${{vars.VARNEW1}}                # 변수 참조
+            SECNEW1: ${{secrets.VAR_SEC_NEW_1}}       # Secrets 참조
+        steps:
+            - run: echo "${VARNEW1}"
+            - run: echo "${SECNEW1}"                  # 로그 출력이 마스킹됨
+            - run: echo "${SECNEW1:0:1} ${SECNEW1#?}" # 로그 출력이 마스킹되지 않음
