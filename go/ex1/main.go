@@ -1,10 +1,9 @@
 package main
 
-func EvenOrOdd(nubmer int) string {
+func EvenOrOdd(number int) string {
 	if number%2 == 0 {
 		return "even"
-	}
-	else {
+	} else {
 		return "odd"
 	}
 }
