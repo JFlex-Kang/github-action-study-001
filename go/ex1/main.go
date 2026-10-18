@@ -5,6 +5,6 @@ func EvenOrOdd(nubmer int) string {
 		return "even"
 	}
 	else {
-		reutrn "odd"
+		return "odd"
 	}
 }
