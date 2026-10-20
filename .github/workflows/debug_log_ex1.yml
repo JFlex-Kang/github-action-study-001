@@ -1,0 +1,7 @@
+name: Debug log test
+on: push
+jobs:
+    logging:
+        runs-on: ubuntu-latest
+        steps:
+            - run: echo "::debug::Output debug log"
