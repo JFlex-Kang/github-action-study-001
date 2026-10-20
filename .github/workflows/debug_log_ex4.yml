@@ -1,0 +1,10 @@
+name: Debug log with masking
+on: push
+jobs:
+  log:
+    runs-on: ubuntu-latest
+    env:
+        PASSWORD: SupaSecret
+    steps:
+      - run: echo "::add-mask::${PASSWORD}"
+      - run: echo "${PASSWORD}"
