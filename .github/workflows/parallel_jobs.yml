@@ -1,0 +1,15 @@
+name: Parallel jobs
+on: push
+jobs:                       # jobs 키에 여러 잡을 정의하면 병렬로 실행
+    first:
+        runs-on: ubuntu-latest
+        steps:
+            - run: sleep 10 & echo "First job"
+    second:
+        runs-on: ubuntu-latest
+        steps:
+            - run: sleep 10 & echo "Second job"
+    third:
+        runs-on: ubuntu-latest
+        steps:
+            - run: sleep 10 & echo "Third job"
