@@ -13,6 +13,6 @@ jobs:
         runs-on: ubuntu-latest
         timeout-minutes: 5                          # 타임아웃 (분)
         steps:
-            - uses: actions/checkout@v4
+            - uses: actions/checkout@v7
             - run: |                                # 정적 분석 실행
                 docker run --rm -v "$(pwd):$(pwd)" -w "$(pwd)" rhysd/actionlint:latest
