@@ -4,7 +4,7 @@ jobs:
     debug:
         runs-on: ubuntu-latest
         steps:
-            - uses: actions/checkout@v4                         # 로컬 액션을 호출하기 전에 체크아웃
+            - uses: actions/checkout@v7                         # 로컬 액션을 호출하기 전에 체크아웃
             - uses: ./.github/actions/dump/                     # 로컬 액션 호출
               id: dump                                          # 출력값 참조를 위한 스텝 ID 지정
               with:

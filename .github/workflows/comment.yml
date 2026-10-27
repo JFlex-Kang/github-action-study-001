@@ -7,7 +7,7 @@ jobs:
             pull-requests: write    # 풀 리퀘스트 쓰기 허가
             contents: read          # 소스 코드 읽기 허가
         steps:
-            - uses: actions/checkout@v4
+            - uses: actions/checkout@v7
             # GITHUB_ACTOR: 워크플로 실행자(풀 리퀘스트 작성한 사람)
             # GITHUB_HEAD_REF: 소스 브렌치명
             - run: gh pr comment "${GITHUB_HEAD_REF}" --body "Hello, ${GITHUB_ACTOR}"

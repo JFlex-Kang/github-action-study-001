@@ -5,4 +5,4 @@ jobs:                                           # 잡 정의
         runs-on: ubuntu-latest                  # 러너(우분투에서 실행)
         steps:                                  # 스텝 정의
             - run: echo "Welcome To World"      # 셸 명령 호출
-            - uses: actions/checkout@v4         # 액션 호출
+            - uses: actions/checkout@v7         # 액션 호출
