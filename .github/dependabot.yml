@@ -1,0 +1,6 @@
+version: 2                              # 설정 파일의 자체 버전
+updates:                                # 의존성 업데이트 설정
+  - package-ecosystem: github-actions   # 패키지 에코시스템 (깃허브 액션 자동 업데이트)
+    directory: /                        # 패키지 매니페스트 배치 위치
+    schedule:                           # 업데이트 스케줄
+      interval: daily                   # (daily, weekly, monthly)
