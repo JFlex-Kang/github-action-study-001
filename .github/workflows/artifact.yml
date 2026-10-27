@@ -5,7 +5,7 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - run: date > date.txt              # 아티팩트 생성
-            - uses: actions/upload-artifact@v4  # 아티팩트 업로드
+            - uses: actions/upload-artifact@v7  # 아티팩트 업로드
               with:
                 name: uploaded                  # 아티팩트 명
                 path: date.txt                  # 업로드 대상 경로
