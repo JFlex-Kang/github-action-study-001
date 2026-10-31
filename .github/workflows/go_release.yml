@@ -19,7 +19,7 @@ jobs:
                 go build -ldflags "-X main.version=${VERSION}" \
                   -o "${RUNNER_TEMP}/example" go/ex2/main.go
             - run: |                                    # 릴리스 노트 작성과 애셋 업로드
-                gh release create "${VERSION}" --TITLE "${VERSION}" --generate-notes
+                gh release create "${VERSION}" --title "${VERSION}" --generate-notes
                 gh release upload "${VERSION}" "${RUNNER_TEMP}/example"
               env:
                 GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
