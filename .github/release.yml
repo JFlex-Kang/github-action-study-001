@@ -1,0 +1,14 @@
+changelog:
+  categories:               # 릴리스 노트 분류 설정
+    - title: Enhancement    # 릴리스 노트에 'Enhancement'라는 분류를 작성
+      labels:
+        - enhancement       # 'Enhancement'에 기재할 풀 리퀘스트의 레이블을 지정
+    - title: Bug Fixes
+      labels:               # 풀 리퀘스트의 레이블을 여러 개 정의 가능
+        - bug
+        - fixes
+  exclude:                  # 릴리스 노트 제외 설정
+    labels:                 # 제외할 레이블
+      - dependencies
+    authors:                # 제외할 풀 리퀘스트 작성자
+      - dependabot
